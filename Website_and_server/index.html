@@ -30,7 +30,7 @@
 
 
 <script>	
-	//While dumb, the code is embedded cause the .js files won't load correctly for me right now.
+	
 	newPlayerID = Math.random().toString()
 	document.getElementById("player").id = newPlayerID
 	let ThisUser = newPlayerID;
@@ -42,8 +42,6 @@
 	socket.on('aPlayerMoved', handleAPlayerMoved)
 	socket.on('newPlayer', handleNewPlayer)
 	socket.on('IP' , handleIP)
-	//I thought this would be a good way to scale positioning since it is dynamic, but as it usually proves - I was wrong. 
-	//Problem is we get the dynamic client page position instead of a fixed page position. I might be able to fix this but for now -> If you zoom, misscale or somehow fuck with the page, så dør baby.
 	function getFieldCorner() {
 		return document.getElementById("field").getBoundingClientRect()
 	}
