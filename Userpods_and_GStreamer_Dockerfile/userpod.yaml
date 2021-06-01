@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: userpod3
+  namespace: userpods
+spec:
+  containers:
+    - image: gstreamer
+      name: gstreamer
+      imagePullPolicy: Never
+      resources: {}
+      ports:
+        - containerPort: 49153
+        
+    - image: canyan/janus-gateway
+      name: gateway
+      imagePullPolicy: Never
+      resources: {}
+      ports:
+        - containerPort: 7089

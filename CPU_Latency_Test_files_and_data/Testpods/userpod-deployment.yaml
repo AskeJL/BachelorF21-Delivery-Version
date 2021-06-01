@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: userpod
+  name: userpod
+  namespace: userpods
+spec:
+  replicas: 0
+  selector:
+    matchLabels:
+      app: userpod
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: userpod
+    spec:
+      containers:
+      - image: coffeebreak
+        name: coffeebreak
+        imagePullPolicy: IfNotPresent
+        resources: {}
+        ports:
+          - containerPort: 7000
+status: {}
