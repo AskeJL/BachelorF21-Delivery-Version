@@ -15,6 +15,7 @@ RUN npm install
 
 COPY ./ /app
 
-EXPOSE 7000
+EXPOSE 49153
+Expose 7088
 
 ENTRYPOINT ["node", "startGstreamer.js"]
