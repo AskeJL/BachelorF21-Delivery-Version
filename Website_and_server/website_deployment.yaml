@@ -7,6 +7,7 @@ metadata:
   name: website
 spec:
   replicas: 1
+  
   selector:
     matchLabels:
       app: website

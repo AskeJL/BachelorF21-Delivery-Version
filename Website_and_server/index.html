@@ -36,8 +36,9 @@
 	let ThisUser = newPlayerID;
 	var playerArray = []
 	var current = [];
-	
-	socket = io('http://172.31.31.121:32612');
+	var IPAdrress;
+
+	socket = io('http://172.24.140.58:32612');
 	socket.on('init', handleInit)
 	socket.on('aPlayerMoved', handleAPlayerMoved)
 	socket.on('newPlayer', handleNewPlayer)
@@ -220,6 +221,9 @@
 		createNewPlayer({id : playerID, x : playerX, y : playerY})
 	}
 	function handleIP(msg){
+		IPAdrress = msg +"/janus"
+		start(IPAdrress)
 		console.log(msg)
+		console.log(IPAdrress)
 	}
 </script>	

@@ -59,6 +59,8 @@ app.get('/', (request,response) => {
 		} else {
 			response.sendFile('/app/public/js/janus.js');
 			response.sendFile('/app/public/js/audiotest.js');
+			response.sendFile('/app/public/Daco_5373298.png');
+			response.sendFile('/app/public/BlueDot.png');
 			response.writeHead(200, {"Content-Type": "text/html"});
 			response.write(htmlRes);
 			response.end();
@@ -201,7 +203,7 @@ async function create_and_fetch_IP (client, name) {
 		let portsArray = getService.body.spec.ports
 		let j = portsArray[0]
 		port= j.nodePort
-		return 'http://172.31.31.121:'+ port}
+		return 'http://172.24.140.58:'+ port}
 	catch(err){console.error('Error: ', err)}
   }
   function sleep(ms) {
